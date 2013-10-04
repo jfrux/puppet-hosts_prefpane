@@ -1,9 +1,10 @@
 require 'spec_helper'
-# Rename this file to classname_spec.rb
-# Check other boxen modules for examples
-# or read http://rspec-puppet.com/tutorial/
+
 describe 'hosts_prefpane' do
   it do
-    
+    should contain_package('Hosts').with({
+      :provider => 'pkgdmg',
+      :source => 'https://github.com/downloads/specialunderwear/Hosts.prefpane/Hosts-1.3.pkg',
+    })
   end
 end
